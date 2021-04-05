@@ -1,0 +1,9 @@
+{
+    "name": "portfolio",
+    "scripts": {
+      "dev": "nuxt",
+      "build": "nuxt build",
+      "generate": "nuxt generate",
+      "start": "nuxt start"
+    }
+  }
