@@ -14,6 +14,11 @@
             <KeywordList :title="skills.title" :keywords="skills.keywords" :has-links="skills.hasLinks" />
             <KeywordList :title="socials.title" :keywords="socials.keywords" :has-links="socials.hasLinks" />
         </div>
+
+        <div class="quote">
+            <div class=""
+            <span class="author"></span>
+        </div>
     </div>
 </template>
 
