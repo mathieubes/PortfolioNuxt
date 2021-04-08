@@ -11,12 +11,14 @@ $breakpoint-big: 1080px; // 1080px
 // colors
 
 $text-color: #001855;
+$gray: #00185580;
 $green: #31BA3F;
 $red: #BA3131;
 $start-gradient: #2194AD;
 $end-gradient: #5221BB;
 $gradient: -webkit-linear-gradient(45deg, #2194AD, #5221BB);
 $visit-card-gradient: -webkit-linear-gradient(45deg, #2193ad99, #5221BB99);
+$low-opacity-gradient: -webkit-linear-gradient(45deg, #2193ad1A, #5221BB1A);
 
 
 // sizes
@@ -202,6 +204,44 @@ p {
     }
 }
 
+// --- keywordlist
+.keyword-list {
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .content {
+        display: grid;
+
+        grid-template-columns: auto auto auto; /* 250px + "largeur restante" */
+        grid-template-rows: 40px 40px 40px; /* 100px + "hauteur restante" */
+
+        .keyword {
+            a {
+                color: $gray;
+                text-decoration: none;
+
+                &:hover {
+                    background: $gradient;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            span {
+                color: $gray;
+                
+                &.favorite {
+                    background: $low-opacity-gradient;
+                    padding: 8px;
+                    border-radius: 15px;
+                }
+            }
+        } 
+    }
+}
+
 
 // pages
 
@@ -211,5 +251,15 @@ p {
 
     div {
         flex: 1;
+    }
+}
+
+.skills-socials {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+
+    div {
+        flex: 40%;
     }
 }
