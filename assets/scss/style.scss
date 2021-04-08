@@ -2,9 +2,10 @@
 
 // screen
 
-$breakpoint-small: 33.75em; // 540px
-$breakpoint-med: 45em; // 720px
-$breakpoint-large: 60em; // 960px
+$breakpoint-small: 540px; // 540px
+$breakpoint-med: 720px; // 720px
+$breakpoint-large: 960px; // 960px
+$breakpoint-big: 1080px; // 1080px
 
 
 // colors
@@ -12,6 +13,8 @@ $breakpoint-large: 60em; // 960px
 $text-color: #001855;
 $green: #31BA3F;
 $red: #BA3131;
+$start-gradient: #2194AD;
+$end-gradient: #5221BB;
 $gradient: -webkit-linear-gradient(45deg, #2194AD, #5221BB);
 $visit-card-gradient: -webkit-linear-gradient(45deg, #2193ad99, #5221BB99);
 
@@ -145,13 +148,19 @@ p {
 
     justify-content: stretch;
     background: white;
-    box-shadow: 0 0 20px #00000040;
+    box-shadow: -20px 0 20px -20px $end-gradient, // left
+                -10px -10px 20px -20px $end-gradient, // left top
+                -10px -10px 20px -20px $end-gradient, // left bottom
+                20px 0 20px -20px $start-gradient, // right
+                10px -10px 20px -20px $start-gradient, // right top
+                10px 10px 20px -20px $start-gradient; // right bottom
     
     .card-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin: $card-margins;
+        height: calc(100% - 60px);
 
         .row {
             display: flex;
@@ -198,6 +207,7 @@ p {
 
 .welcome {
     display: flex;
+    margin-top: 100px;
 
     div {
         flex: 1;
