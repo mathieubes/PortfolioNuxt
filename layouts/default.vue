@@ -3,5 +3,6 @@
         <Navigation />
         <Nuxt />
         <GoTop />
+        <Footer />
     </div>
 </template>

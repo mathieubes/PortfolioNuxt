@@ -16,8 +16,8 @@
         </div>
 
         <div class="quote">
-            <div class=""
-            <span class="author"></span>
+            <div class="text text-gradient">Things should be made as simple as possible, but not simpler.</div>
+            <span class="author">- Albert Einstein</span>
         </div>
     </div>
 </template>

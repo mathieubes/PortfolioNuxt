@@ -74,6 +74,12 @@ p {
     font-size: $normal-text;
 }
 
+footer {
+    margin-top: 200px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
 
 // container
 
@@ -103,6 +109,13 @@ p {
 .uppercased {
     text-transform: uppercase;
     letter-spacing: $letter-spacing;
+}
+
+.text-gradient {
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -249,22 +262,17 @@ p {
 
 .go-top {
     position: fixed;
-    bottom: 60px;
+    bottom: 180px;
     left: 40px;
     transform: rotateZ(-90deg);
     font-size: 18px;
-
-    background: $gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 // pages
 
 .welcome {
     display: flex;
-    margin-top: 100px;
+    margin-top: 150px;
 
     div {
         flex: 1;
@@ -278,5 +286,21 @@ p {
 
     div {
         flex: 40%;
+    }
+}
+
+.quote {
+    margin-top: 200px;
+
+    .text {
+        font-size: $big-text;
+        margin-bottom: 50px;
+    }
+
+    .author {
+        display: inline-block;
+        font-size: $medium-text;
+        width: 100%;
+        text-align: right;
     }
 }

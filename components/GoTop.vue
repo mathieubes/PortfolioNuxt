@@ -1,5 +1,5 @@
 <template>
-    <a class="go-top" href="#">
+    <a class="go-top text-gradient" href="#">
         Go top <img :src="goTopIcon" />
     </a>
 </template>
