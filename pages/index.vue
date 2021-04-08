@@ -1,11 +1,11 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-6">
+        <div class="welcome">
+            <div>
                 <h1>Mathieu Bes</h1>
                 <h2>Student web developer & design lover based in Paris.</h2>
             </div>
-            <div class="col-6">
+            <div>
                 <VisitCard />
             </div>
         </div>
