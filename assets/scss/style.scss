@@ -44,6 +44,10 @@ body {
   font-size: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 // globals
 
@@ -219,7 +223,6 @@ p {
         .keyword {
             a {
                 color: $gray;
-                text-decoration: none;
 
                 &:hover {
                     background: $gradient;
@@ -242,6 +245,20 @@ p {
     }
 }
 
+// --- gotop
+
+.go-top {
+    position: fixed;
+    bottom: 60px;
+    left: 40px;
+    transform: rotateZ(-90deg);
+    font-size: 18px;
+
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 // pages
 
