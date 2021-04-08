@@ -1,0 +1,18 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Iconly/Curved/Heart">
+<g id="Heart">
+<path id="Stroke 1" fill-rule="evenodd" clip-rule="evenodd" d="M4.38279 18.6694C2.77329 13.6444 4.65579 7.39691 9.93129 5.69891C12.7063 4.80341 16.1308 5.55041 18.0763 8.23391C19.9108 5.45141 23.4343 4.80941 26.2063 5.69891C31.4803 7.39691 33.3733 13.6444 31.7653 18.6694C29.2603 26.6344 20.5198 30.7834 18.0763 30.7834C15.6343 30.7834 6.97179 26.7274 4.38279 18.6694Z" stroke="url(#paint0_linear)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 3" d="M23.6829 11.3459C25.4934 11.5319 26.6259 12.9674 26.5584 14.9789" stroke="url(#paint1_linear)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="32.3207" y1="5.3252" x2="3.03056" y2="6.57521" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5221BB"/>
+<stop offset="1" stop-color="#2194AD"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="26.5612" y1="11.3459" x2="23.5999" y2="11.4354" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5221BB"/>
+<stop offset="1" stop-color="#2194AD"/>
+</linearGradient>
+</defs>
+</svg>
