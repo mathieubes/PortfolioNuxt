@@ -59,16 +59,20 @@ export default {
 
 <style>
 .flip-enter-active, .flip-leave-active {
-  transition: transform .3s linear, filter .3s linear;
+  transition: opacity .25s ease-in, transform .25s ease-in;
 }
 
-.flip-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: rotateY(-90deg);
-  filter: grayscale(50%);
+.flip-leave-active {
+  transition: opacity .25s ease-out, transform .25s ease-out;
 }
 
-.flip-enter {
+.flip-leave-to, .flip-enter /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+/* .flip-enter {
     transform: rotateY(90deg);
     filter: grayscale(50%);
-}
+} */
 </style>

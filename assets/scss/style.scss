@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
 // screen
 
@@ -12,6 +12,7 @@ $breakpoint-big: 1080px; // 1080px
 
 $text-color: #001855;
 $gray: #00185580;
+$light-gray: #0018551A;
 $green: #31BA3F;
 $red: #BA3131;
 $start-gradient: #2194AD;
@@ -23,10 +24,11 @@ $low-opacity-gradient: -webkit-linear-gradient(45deg, #2193ad1A, #5221BB1A);
 
 // sizes
 
+$content-text: 18px;
 $normal-text: 24px;
 $medium-text: 36px;
 $big-text: 64px;
-$letter-spacing: 7%;
+$letter-spacing: 0.8px;
 
 $card-margins: 60px;
 
@@ -62,12 +64,22 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: $big-text;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 h2 {
     font-size: $medium-text;
     font-weight: normal;
 
+}
+
+h3 {
+    font-size: $content-text;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+    color: $gray;
 }
 
 p {
@@ -258,6 +270,21 @@ footer {
     }
 }
 
+// --- projectinfo
+
+.project-info {
+    margin-top: 40px;
+
+    p {
+        font-size: $content-text;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
 // --- gotop
 
 .go-top {
@@ -270,6 +297,7 @@ footer {
 
 // pages
 
+// --- index
 .welcome {
     display: flex;
     margin-top: 150px;
@@ -302,5 +330,79 @@ footer {
         font-size: $medium-text;
         width: 100%;
         text-align: right;
+    }
+}
+
+// --- projects
+
+.project-link {
+    font-size: $big-text;
+    text-align: center;
+    margin: 100px 0;
+}
+
+// --- project
+
+.project-container {
+    margin-top: 75px;
+
+    .logo {
+        display: block;
+        height: 48px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    }
+
+    .project-name {
+        font-weight: normal;
+
+        .close-icon {
+            float: right;
+
+            img {
+                width: 48px;
+                height: auto;
+                filter: grayscale(1);
+                opacity: 0.5;
+                transition: opacity .5s ease, filter .5s ease;
+
+                &:hover {
+                    filter: grayscale(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .group-info {
+        display: flex;
+
+        .info {
+            flex: 1;
+        }
+
+        .desc {
+            flex: 1;
+
+            p {
+                margin-top: 40px;
+                font-size: $content-text;
+                text-align: justify;
+            }
+        }
+    }
+
+    .image-mosaique {
+        margin-top: 70px;
+        h3 {
+            margin-bottom: 50px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #00000040;
+        }
     }
 }

@@ -6,6 +6,9 @@ export default {
         title: 'MB - Dev & UI',
         meta: [
             { charset: 'utf-8' },
+        ],
+        link: [
+            { rel: 'icon', type: 'image/png', href: '/favicon.png'}
         ]
     },
     components: true,

@@ -1,0 +1,23 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Iconly/Curved/Close Square">
+<g id="Close Square">
+<path id="Stroke 1" d="M19.1921 12.793L12.8027 19.1823" stroke="url(#paint0_linear)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 2" d="M19.1998 19.1908L12.7998 12.7908" stroke="url(#paint1_linear)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Stroke 3" fill-rule="evenodd" clip-rule="evenodd" d="M3.6665 16.0001C3.6665 25.2494 6.7505 28.3334 15.9998 28.3334C25.2492 28.3334 28.3332 25.2494 28.3332 16.0001C28.3332 6.75075 25.2492 3.66675 15.9998 3.66675C6.7505 3.66675 3.6665 6.75075 3.6665 16.0001Z" stroke="url(#paint2_linear)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="19.1921" y1="12.793" x2="12.6221" y2="13.0435" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5221BB"/>
+<stop offset="1" stop-color="#2194AD"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="19.1998" y1="12.7908" x2="12.6189" y2="13.0417" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5221BB"/>
+<stop offset="1" stop-color="#2194AD"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="28.3332" y1="3.66675" x2="2.96933" y2="4.63383" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5221BB"/>
+<stop offset="1" stop-color="#2194AD"/>
+</linearGradient>
+</defs>
+</svg>

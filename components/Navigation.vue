@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div class="row center navigation">
+        <div class="row center navigation" v-if="currentPage != 'project-name'">
             <div class="nav-link" v-for="page in this.pages" :key="page.id">
                 <NuxtLink :to='page.route'>
                     <img :src='page.activeIcon' v-if='page.filename === currentPage'/>
@@ -31,7 +31,6 @@
                     { filename: "about", route: "/about", title: "about", icon: ProfileIcon, activeIcon: ProfileActiveIcon },
                     { filename: "contact", route: "/contact", title: "contact", icon: SendIcon, activeIcon: SendActiveIcon }
                 ],
-                // currentPage: this.$nuxt.$route.name
             }
         },
         computed: {
