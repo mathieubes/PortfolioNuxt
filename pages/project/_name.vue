@@ -29,6 +29,7 @@
 import CloseSquareIcon from '@/assets/images/CloseSquare.svg';
 
 export default {
+    scrollToTop: true,
     data: function() {
         return {
             closeIcon: CloseSquareIcon,
