@@ -46,11 +46,11 @@ export default {
                 keywords: [
                     {text: 'dribbble', link: 'https://google.com/'},
                     {text: 'github', link: 'https://github.com/mathieubes'},
-                    {text: 'instagram', link: 'https://google.com/'},
+                    {text: 'instagram', link: 'https://instagram.com/bs.mathieu'},
                     {text: 'linkedin', link: 'https://www.linkedin.com/in/mathieu-bes-498085155/'},
-                    {text: 'malt', link: 'https://google.com/'},
+                    {text: 'malt', link: 'https://www.malt.fr/profile/mathieubes'},
                     {text: 'medium', link: 'https://google.com/'},
-                    {text: 'twitter', link: 'https://google.com/'},
+                    {text: 'twitter', link: 'https://www.twitter.com/mathieubes_'},
                 ],
                 hasLinks: true
             }
