@@ -1,6 +1,7 @@
 <template>
     <div class="container project-container">
-        <img class="logo" :src="require(`~/assets/images/projects/${currentProject()}.png`)" />
+        <img class="logo" v-if="hasLogo()" :src="require(`~/assets/images/projects/${currentProject()}.png`)" />
+        <img class="logo" v-else src="~/assets/images/mathieubes.png" />
 
         <h1 class="project-name">{{ getProjectName() }} <NuxtLink class="close-icon" to="/projects"><img :src="closeIcon"></NuxtLink></h1>
 
@@ -32,6 +33,7 @@ export default {
         return {
             closeIcon: CloseSquareIcon,
             'autosur': {
+                hasLogo: true,
                 projectName: 'Time clock Autosur',
                 period: 'spring 2021',
                 compagnies: 'autosur',
@@ -43,7 +45,21 @@ export default {
                 ],
                 projectImages: []
             },
+            'intolerences': {
+                hasLogo: false,
+                projectName: 'Intolerences',
+                period: 'since january 2021',
+                compagnies: 'own business',
+                skills: ['figma', 'swift', 'kotlin', 'nodejs (api) [not sure yet]'],
+                desc: [
+                    'The OSM Gasoil Now project is a project that “migrated” the “Gasoil Now” mobile application to a website.',
+                    'This web application is, unlike the application, primarily intended for times of crisis and fuel shortages.',
+                    'The main goal for this app was optimization. The site needed to be able to handle the load of thousands of users. For this, a personalized caching system has been set up to support the load both on the web server and also on the API server.'
+                ],
+                projectImages: ['WELCOME - 1.png', 'WELCOME - 2.png', 'WELCOME - 3.png', 'SCAN.png', 'SCAN - Positive.png']
+            },
             '03-july': {
+                hasLogo: true,
                 projectName: 'Gasoil Now OSM',
                 period: 'winter 2020',
                 compagnies: '03july & leonard.agency',
@@ -54,6 +70,17 @@ export default {
                     'The main goal for this app was optimization. The site needed to be able to handle the load of thousands of users. For this, a personalized caching system has been set up to support the load both on the web server and also on the API server.'
                 ],
                 projectImages: ['map.png']
+            },
+            'school-projects': {
+                hasLogo: false,
+                projectName: 'My school projects',
+                period: '2018 to 2020',
+                compagnies: 'None',
+                skills: ['html / css', 'php', 'java', 'javascript', 'merise', 'mcd', 'sql'],
+                desc: [
+                    'Not yet.'
+                ],
+                projectImages: []
             }
         }
     },
@@ -81,6 +108,9 @@ export default {
         },
         hasProjectImages: function() {
             return this[this.currentProject()].projectImages == 0 ? false : true
+        },
+        hasLogo: function() {
+            return this[this.currentProject()].hasLogo
         }
     }
 }
