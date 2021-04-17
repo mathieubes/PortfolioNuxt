@@ -414,13 +414,33 @@ footer {
 // --- about
 
 .about-container {
-    display: flex;
+    margin-top: 100px;
 
-    .picture {
+    .flex {
+        display: flex;
+        align-items: center;
+
+        .picture {
+            flex: 1;
+            text-align: center;
     
+            img {
+                width: 75%;
+            }
+        }
+    
+        .content {
+            flex: 1;
+            .title {
+                font-size: $medium-text;
+                font-weight: normal;
+            }
+        }
     }
 
-    .content {
-
+    .emojis {
+        margin-top: 50px;
+        font-size: $big-text;
+        text-align: center;
     }
 }
