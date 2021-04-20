@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav class="main-navigation">
         <div class="row center navigation" v-if="currentPage != 'project-name'">
             <div class="nav-link" v-for="page in this.pages" :key="page.id">
                 <NuxtLink :to='page.route'>
