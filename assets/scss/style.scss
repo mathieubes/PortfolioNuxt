@@ -444,3 +444,22 @@ footer {
         text-align: center;
     }
 }
+
+.contact-container {
+    margin-top: 200px;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+// transitions
+
+.fade-page-transition-enter-active, .fade-page-transition-leave-active {
+    transition: opacity 250ms, transform 250ms;
+}
+
+.fade-page-transition-enter, .fade-page-transition-leave-active { 
+    opacity: 0;
+    transform: translateX(50px);
+}

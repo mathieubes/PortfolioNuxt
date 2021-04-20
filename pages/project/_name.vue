@@ -113,6 +113,7 @@ export default {
         hasLogo: function() {
             return this[this.currentProject()].hasLogo
         }
-    }
+    },
+    transition: 'fade-page-transition'
 }
 </script>

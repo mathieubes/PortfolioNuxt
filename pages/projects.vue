@@ -25,6 +25,7 @@ export default {
         formatTitle(title) {
             return title.replace('-', ' ').toUpperCase()
         }
-    }
+    },
+    transition: 'fade-page-transition'
 }
 </script>

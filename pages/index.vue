@@ -55,6 +55,7 @@ export default {
                 hasLinks: true
             }
         }
-    }
+    },
+    transition: 'fade-page-transition'
 }
 </script>
