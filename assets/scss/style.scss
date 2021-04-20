@@ -459,7 +459,17 @@ footer {
     transition: opacity 250ms, transform 250ms;
 }
 
-.fade-page-transition-enter, .fade-page-transition-leave-active { 
+.fade-page-transition-enter-active { 
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.fade-page-transition-enter { 
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateY(-50px);
+}
+
+.fade-page-transition-leave-active {
+    opacity: 0;
+    transform: translateY(50px);
 }
