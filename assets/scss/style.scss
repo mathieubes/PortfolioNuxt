@@ -154,7 +154,8 @@ footer {
         bottom: 0px;
         width: 100%;
         background-color: rgba(white, 0.2);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
         
         .navigation {
             margin: 20px 0;
