@@ -544,7 +544,7 @@ footer {
 // transitions
 
 .fade-page-transition-enter-active, .fade-page-transition-leave-active {
-    transition: opacity 250ms, transform 250ms;
+    transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
 }
 
 .fade-page-transition-enter-active { 
