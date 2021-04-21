@@ -1,10 +1,10 @@
 <template>
     <div class="container about-container">
         <div class="flex">
-            <div class="picture">
+            <div data-aos="fade-right" class="picture">
                 <img src="~/assets/images/me.png" alt="Picture of me">
             </div>
-            <div class="content">
+            <div data-aos="fade-left" class="content">
                 <h1 class="title uppercased">Joy of living</h1>
                 <p>
                     I am often defined as the joy of living.<br/>
@@ -17,7 +17,9 @@
         </div>
 
         <div class="emojis">
-            🇫🇷 😁 💻
+            <span data-aos="zoom-in" data-aos-offset="0" data-aos-delay="300">🇫🇷</span>
+            <span data-aos="zoom-in" data-aos-offset="0" data-aos-delay="600">😁</span>
+            <span data-aos="zoom-in" data-aos-offset="0" data-aos-delay="900">💻</span>
         </div>
     </div>
 </template>

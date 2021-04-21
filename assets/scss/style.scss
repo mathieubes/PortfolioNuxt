@@ -395,6 +395,14 @@ footer {
 
 // --- projects
 
+.projects-container {
+    margin-top: 150px;
+
+    @media screen and (max-width: $breakpoint-med) {
+        margin-top: 0;
+    }
+}
+
 .project-link {
     font-size: $big-text;
     text-align: center;

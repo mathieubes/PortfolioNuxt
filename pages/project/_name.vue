@@ -3,35 +3,41 @@
         <img class="logo" v-if="hasLogo()" :src="require(`~/assets/images/projects/${currentProject()}.png`)" />
         <img class="logo" v-else src="~/assets/images/mathieubes.png" />
 
-        <h1 class="project-name">{{ getProjectName() }} <NuxtLink class="close-icon" to="/projects"><img :src="closeIcon"></NuxtLink></h1>
+        <div data-aos="fade-down" data-aos-duration="750">
+            <h1 class="project-name">{{ getProjectName() }} <NuxtLink class="close-icon" to="/projects"><img :src="closeIcon"></NuxtLink></h1>
+        </div>
 
         <div class="group-info">
             <div class="info">
-                <ProjectInfo title="Period" :content="getPeriod()" />
-                <ProjectInfo title="Compagnies" :content="getCompagnies()" />
-                <ProjectInfo title="Skills" :content="getSkills()" />
+                <ProjectInfo data-aos="fade-right" data-aos-delay="300" title="Period" :content="getPeriod()" />
+                <ProjectInfo data-aos="fade-right" data-aos-delay="600" title="Compagnies" :content="getCompagnies()" />
+                <ProjectInfo data-aos="fade-right" data-aos-delay="900" data-aos-offset="0" title="Skills" :content="getSkills()" />
             </div>
+
             <div class="desc">
-                <p v-for="(paragraph, key) in getDesc()" :key="key">
+                <p v-for="(paragraph, key) in getDesc()" :key="key" data-aos="fade-left" data-aos-offset="0" :data-aos-delay="++paragraphOrder * 300"> 
                     {{ paragraph }}
                 </p>
             </div>
         </div>
 
-        <div class="image-mosaique" v-if="hasProjectImages()">
+        <div data-aos="fade-down" class="image-mosaique" v-if="hasProjectImages()">
             <h3>Assets</h3>
-            <img v-for="projectImage in getProjectImages()" :key="projectImage" :src="require(`~/assets/images/projects/${currentProject()}/${projectImage}`)" />
+            <img data-aos="zoom-in" v-for="projectImage in getProjectImages()" :key="projectImage" :src="require(`~/assets/images/projects/${currentProject()}/${projectImage}`)" />
         </div>
     </div>
 </template>
 
 <script>
+import aos from '~/mixins/aos'
+
 import CloseSquareIcon from '@/assets/images/CloseSquare.svg';
 
 export default {
     scrollToTop: true,
     data: function() {
         return {
+            paragraphOrder: 0,
             closeIcon: CloseSquareIcon,
             'autosur': {
                 hasLogo: true,
@@ -42,7 +48,8 @@ export default {
                 desc: [
                     'Since the Autosur\'s technical control of Champlan change his whole computer pool they wanted a new time clock software for their employees.',
                     'The development of this project is in progress...',
-                    'It will be available for Windows, MacOS and Linux with the new DotNET Core 5.'
+                    'It will be available for Windows, MacOS and Linux with the new DotNET Core 5.',
+                    ''
                 ],
                 projectImages: []
             },
@@ -55,7 +62,8 @@ export default {
                 desc: [
                     'The OSM Gasoil Now project is a project that “migrated” the “Gasoil Now” mobile application to a website.',
                     'This web application is, unlike the application, primarily intended for times of crisis and fuel shortages.',
-                    'The main goal for this app was optimization. The site needed to be able to handle the load of thousands of users. For this, a personalized caching system has been set up to support the load both on the web server and also on the API server.'
+                    'The main goal for this app was optimization. The site needed to be able to handle the load of thousands of users. For this, a personalized caching system has been set up to support the load both on the web server and also on the API server.',
+                    ''
                 ],
                 projectImages: ['WELCOME - 1.png', 'WELCOME - 2.png', 'WELCOME - 3.png', 'SCAN.png', 'SCAN - Positive.png']
             },
@@ -68,7 +76,8 @@ export default {
                 desc: [
                     'The OSM Gasoil Now project is a project that “migrated” the “Gasoil Now” mobile application to a website.',
                     'This web application is, unlike the application, primarily intended for times of crisis and fuel shortages.',
-                    'The main goal for this app was optimization. The site needed to be able to handle the load of thousands of users. For this, a personalized caching system has been set up to support the load both on the web server and also on the API server.'
+                    'The main goal for this app was optimization. The site needed to be able to handle the load of thousands of users. For this, a personalized caching system has been set up to support the load both on the web server and also on the API server.',
+                    ''
                 ],
                 projectImages: ['map.png']
             },
@@ -79,7 +88,8 @@ export default {
                 compagnies: 'None',
                 skills: ['html / css', 'php', 'java', 'javascript', 'merise', 'mcd', 'sql'],
                 desc: [
-                    'Not yet.'
+                    'Not yet.',
+                    ''
                 ],
                 projectImages: []
             }
@@ -112,8 +122,12 @@ export default {
         },
         hasLogo: function() {
             return this[this.currentProject()].hasLogo
+        },
+        setParagraphDelay: function() {
+            return 
         }
     },
+    mixins: [aos],
     transition: 'fade-page-transition'
 }
 </script>
