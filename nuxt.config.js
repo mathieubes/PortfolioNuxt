@@ -1,6 +1,6 @@
 export default {
     server: {
-	host: '51.210.254.197',
+	    host: 'localhost', // 51.210.254.197
         port: 3000
     },
     css: [
